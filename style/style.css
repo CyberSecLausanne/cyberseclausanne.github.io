@@ -1,0 +1,32 @@
+/* Style pour centrer le contenu verticalement et horizontalement */
+.full-height {
+    height: 100vh;
+}
+
+/* Mode Night */
+body {
+    background-color: #121212; /* Fond sombre */
+    color: #ffffff; /* Texte clair */
+    padding-top: 56px; /* Pour éviter que le contenu soit masqué par le header */
+}
+
+.navbar {
+    background-color: #1f1f1f; /* Fond sombre pour le header */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important; /* Couleur blanche pour les liens */
+}
+
+.nav-link:hover {
+    color: #ff0000 !important; /* Couleur d'accentuation au survol */
+}
+
+h1 {
+    color: #ff0000; /* Couleur d'accentuation pour le titre principal */
+}
+
+/* Titre des sections avec un fond clair */
+.bg-light h2 {
+    color: #000; /* Noir */
+}
