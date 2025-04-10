@@ -1,6 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Sélectionner tous les liens de navigation
-    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // Fonction pour détecter la section active
+    function setActiveLink() {
+        let index = sections.length;
+
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove("active"));
+        navLinks[index].classList.add("active");
+    }
+
+    // Ajouter un écouteur d'événement pour le défilement
+    window.addEventListener("scroll", setActiveLink);
 
     // Ajouter un événement de clic à chaque lien
     navLinks.forEach(link => {

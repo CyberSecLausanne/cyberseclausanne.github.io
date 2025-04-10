@@ -1,6 +1,6 @@
 /* Style pour centrer le contenu verticalement et horizontalement */
 .full-height {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Mode Night */
@@ -18,8 +18,19 @@ body {
     color: #ffffff !important; /* Couleur blanche pour les liens */
 }
 
+.navbar-brand {
+    font-size: 1.25rem; /* Augmente légèrement la taille du texte */
+    font-weight: bold; /* Optionnel : rendre le texte plus gras */
+}
+
 .nav-link:hover {
     color: #ff0000 !important; /* Couleur d'accentuation au survol */
+}
+
+/* Style pour le lien actif dans le menu */
+.nav-link.active {
+    color: #ff0000 !important; /* Rouge */
+    font-weight: bold; /* Optionnel : rendre le lien plus visible */
 }
 
 h1 {
@@ -29,4 +40,58 @@ h1 {
 /* Titre des sections avec un fond clair */
 .bg-light h2 {
     color: #000; /* Noir */
+}
+
+/* Supprimer la contrainte de hauteur minimale pour les sections */
+section {
+    display: flex; /* Utiliser flexbox pour centrer le contenu si nécessaire */
+    flex-direction: column; /* Aligner les éléments verticalement */
+    justify-content: flex-start; /* Aligner le contenu en haut */
+    align-items: center; /* Centrer horizontalement */
+    padding: 2rem 1rem; /* Ajouter un padding pour éviter que le contenu touche les bords */
+}
+
+/* Ajustement spécifique pour les sections avec beaucoup de contenu */
+section .container {
+    padding-bottom: 2rem; /* Ajouter un espace en bas pour éviter que le contenu touche les bords */
+}
+
+/* Gérer les cartes dans les sections avec des colonnes */
+.card {
+    margin-bottom: 1rem; /* Ajouter un espacement entre les cartes */
+}
+
+/* Gérer les sections en vue mobile */
+@media (max-width: 768px) {
+    .row {
+        flex-wrap: wrap; /* Permettre aux colonnes de s'empiler en vue mobile */
+    }
+
+    .col-md-3 {
+        flex: 0 0 100%; /* Faire en sorte que chaque colonne occupe 100% de la largeur */
+        max-width: 100%;
+    }
+}
+
+/* Logo dans le header */
+.navbar-brand img {
+    height: 40px;
+}
+
+/* Logo dans le footer */
+footer .navbar-brand img {
+    height: 30px;
+    margin-right: 0;
+}
+
+/* Mettre tous les liens en rouge */
+a {
+    color: #ff0000; /* Rouge */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+}
+
+/* Ajouter un effet au survol */
+a:hover {
+    color: #ff0000; /* Rouge (assure que la couleur reste rouge au survol) */
+    text-decoration: underline; /* Souligner au survol */
 }
