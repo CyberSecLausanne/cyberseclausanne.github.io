@@ -10,6 +10,39 @@ body {
     padding-top: 56px; /* Pour éviter que le contenu soit masqué par le header */
 }
 
+/* Mode Light */
+body.light-mode {
+    background-color: #ffffff; /* Fond clair */
+    color: #000000; /* Texte sombre */
+}
+
+body.light-mode .navbar {
+    background-color: #f8f9fa; /* Fond clair pour le header */
+}
+
+body.light-mode .navbar-brand, 
+body.light-mode .nav-link {
+    color: #000000 !important; /* Liens en noir */
+}
+
+body.light-mode .bg-dark {
+    background-color: #f8f9fa !important; /* Remplace les fonds sombres */
+    color: #000000 !important; /* Texte sombre */
+}
+
+body.light-mode .bg-secondary {
+    background-color: #e9ecef !important; /* Fond gris clair */
+    color: #000000 !important; /* Texte sombre */
+}
+
+body.light-mode a {
+    color: #007bff; /* Liens en bleu */
+}
+
+body.light-mode a:hover {
+    color: #0056b3; /* Liens en bleu foncé au survol */
+}
+
 .navbar {
     background-color: #1f1f1f; /* Fond sombre pour le header */
 }
@@ -78,10 +111,16 @@ section .container {
     height: 40px;
 }
 
+/* Icône soleil */
+.bi-sun {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 /* Logo dans le footer */
 footer .navbar-brand img {
     height: 30px;
-    margin-right: 0;
+    margin-right: 0.5rem; /* Espacement entre le logo et le texte */
 }
 
 /* Mettre tous les liens en rouge */
