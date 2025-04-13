@@ -1,3 +1,9 @@
+/* Définir les variables globales */
+:root {
+    --primary-color: #ff0000; /* Rouge comme couleur primaire */
+    --primary-hover-color: #cc0000; /* Rouge foncé pour le survol */
+}
+
 /* Style pour centrer le contenu verticalement et horizontalement */
 .full-height {
     min-height: 100vh;
@@ -6,73 +12,117 @@
 /* Mode Night */
 body {
     background-color: #121212; /* Fond sombre */
-    color: #ffffff; /* Texte clair */
+    color: white; /* Texte clair */
     padding-top: 56px; /* Pour éviter que le contenu soit masqué par le header */
 }
 
 /* Mode Light */
 body.light-mode {
-    background-color: #ffffff; /* Fond clair */
-    color: #000000; /* Texte sombre */
+    background-color: white; /* Fond clair */
+    color: black; /* Texte sombre */
 }
 
 body.light-mode .navbar {
     background-color: #f8f9fa; /* Fond clair pour le header */
 }
 
-body.light-mode .navbar-brand, 
-body.light-mode .nav-link {
-    color: #000000 !important; /* Liens en noir */
-}
-
 body.light-mode .bg-dark {
     background-color: #f8f9fa !important; /* Remplace les fonds sombres */
-    color: #000000 !important; /* Texte sombre */
+    color: black !important; /* Texte sombre */
 }
 
 body.light-mode .bg-secondary {
     background-color: #e9ecef !important; /* Fond gris clair */
-    color: #000000 !important; /* Texte sombre */
+    color: black !important; /* Texte sombre */
 }
 
-body.light-mode a {
-    color: #007bff; /* Liens en bleu */
+/* Liens du header et du footer en mode Light */
+body.light-mode .navbar .nav-link,
+body.light-mode footer a {
+    color: black !important; /* Noir par défaut */
+    text-decoration: none; /* Pas de soulignement */
 }
 
-body.light-mode a:hover {
-    color: #0056b3; /* Liens en bleu foncé au survol */
+body.light-mode .navbar .nav-link:hover,
+body.light-mode footer a:hover {
+    color: var(--primary-color) !important; /* Couleur primaire au survol */
+    text-decoration: underline; /* Souligner au survol */
 }
 
+body.light-mode .navbar .nav-link.active,
+body.light-mode footer a.active {
+    color: black !important; /* Noir lorsque actif */
+    font-weight: bold; /* Gras lorsque actif */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+/* Styles communs pour les liens */
+a {
+    color: var(--primary-color) !important; /* Couleur primaire */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+}
+
+a:hover {
+    color: var(--primary-hover-color) !important; /* Couleur primaire foncée au survol */
+    text-decoration: underline; /* Souligner au survol */
+}
+
+/* Icônes LinkedIn */
+body.light-mode .bi-linkedin {
+    color: #0077b5; /* Bleu LinkedIn */
+}
+
+body:not(.light-mode) .bi-linkedin {
+    color: white; /* Blanc */
+}
+
+/* Footer */
+footer {
+    padding: 1rem; /* Ajout d'un padding commun */
+}
+
+body.light-mode footer {
+    background-color: #f8f9fa !important; /* Fond clair */
+    color: black !important; /* Texte noir */
+}
+
+body:not(.light-mode) footer {
+    background-color: #1f1f1f !important; /* Fond sombre */
+    color: white !important; /* Texte blanc */
+}
+
+/* Navbar */
 .navbar {
     background-color: #1f1f1f; /* Fond sombre pour le header */
 }
 
 .navbar-brand, .nav-link {
-    color: #ffffff !important; /* Couleur blanche pour les liens */
+    color: white !important; /* Couleur blanche pour les liens */
 }
 
 .navbar-brand {
     font-size: 1.25rem; /* Augmente légèrement la taille du texte */
-    font-weight: bold; /* Optionnel : rendre le texte plus gras */
+    font-weight: bold; /* Texte en gras */
 }
 
+/* Lien non actif au survol */
 .nav-link:hover {
-    color: #ff0000 !important; /* Couleur d'accentuation au survol */
+    color: var(--primary-color) !important; /* Couleur d'accentuation au survol */
 }
 
-/* Style pour le lien actif dans le menu */
+/* Lien actif dans le menu */
 .nav-link.active {
-    color: #ff0000 !important; /* Rouge */
-    font-weight: bold; /* Optionnel : rendre le lien plus visible */
+    font-weight: bold; /* Mettre en gras */
+    text-decoration: none; /* Pas de soulignement */
 }
 
 h1 {
-    color: #ff0000; /* Couleur d'accentuation pour le titre principal */
+    color: var(--primary-color); /* Couleur d'accentuation pour le titre principal */
 }
 
 /* Titre des sections avec un fond clair */
 .bg-light h2 {
-    color: #000; /* Noir */
+    color: black; /* Noir */
 }
 
 /* Supprimer la contrainte de hauteur minimale pour les sections */
@@ -123,14 +173,9 @@ footer .navbar-brand img {
     margin-right: 0.5rem; /* Espacement entre le logo et le texte */
 }
 
-/* Mettre tous les liens en rouge */
-a {
-    color: #ff0000; /* Rouge */
-    text-decoration: none; /* Supprimer le soulignement par défaut */
-}
-
-/* Ajouter un effet au survol */
-a:hover {
-    color: #ff0000; /* Rouge (assure que la couleur reste rouge au survol) */
-    text-decoration: underline; /* Souligner au survol */
+/* Photo des founders */
+.img-founders {
+    border-radius: 15px; /* Arrondir les bords */
+    overflow: hidden; /* Assurer que le contenu reste à l'intérieur des bords arrondis */
+    height: 200px;
 }
