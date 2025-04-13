@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
+    const toggleIcon = document.querySelector(".bi-sun"); // Sélectionner l'icône soleil
+    const body = document.body;
 
     // Fonction pour détecter la section active
     function setActiveLink() {
@@ -33,5 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 behavior: 'smooth' // Défilement fluide
             });
         });
+    });
+
+    // Ajouter un événement de clic sur l'icône
+    toggleIcon.addEventListener("click", function () {
+        body.classList.toggle("light-mode"); // Basculer la classe "light-mode" sur le body
+
+        // Basculer entre les icônes soleil et lune
+        if (body.classList.contains("light-mode")) {
+            toggleIcon.classList.remove("bi-sun");
+            toggleIcon.classList.add("bi-moon");
+            toggleIcon.style.color = "#000000"; // Lune en noir
+        } else {
+            toggleIcon.classList.remove("bi-moon");
+            toggleIcon.classList.add("bi-sun");
+            toggleIcon.style.color = "#ffffff"; // Soleil en blanc
+        }
     });
 });
