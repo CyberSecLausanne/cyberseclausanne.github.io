@@ -179,3 +179,9 @@ footer .navbar-brand img {
     overflow: hidden; /* Assurer que le contenu reste à l'intérieur des bords arrondis */
     height: 200px;
 }
+
+/* Alignement des listes à gauche */
+ul {
+    padding-left: 0rem; /* Ajuste l'indentation des listes */
+    list-style-position: inside; /* Place les points à l'intérieur de la boîte */
+}
