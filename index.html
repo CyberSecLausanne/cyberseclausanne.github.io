@@ -9,8 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/cybersec_lausanne-logo.png">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Site officiel de l'association CyberSécurité Lausanne, dédié à la sensibilisation et à la sécurité numérique.">
-    <meta name="keywords" content="CyberSécurité, Lausanne, Association, Sécurité numérique, SafeForKids">
+    <meta name="description" content="Site communautaire de CyberSécurité Lausanne, dédié à la sensibilisation et à la sécurité numérique.">
+    <meta name="keywords" content="CyberSécurité, Lausanne, Sécurité numérique">
     <meta name="author" content="CyberSécurité Lausanne">
 </head>
 <body>
@@ -48,7 +48,7 @@
         </p>
     </section>
     <section id="tools" class="bg-secondary text-white full-height">
-        <div class="container py-5">
+        <div class="container-fluid py-5">
             <!-- Titre -->
             <h2 class="mb-4">Outils</h2>
             <h5>Solutions technique de CyberSécurité</h5>
@@ -68,7 +68,7 @@
                 <div class="col-md-3">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title">IDS / IPS</h5>
+                            <h5 class="card-title">Serveurs anti-intrusions (IDS/IPS)</h5>
                             <p>Détection et Protection contre les intrusions dans les réseaux</p>
                             <ul>
                                 <li><a href="https://www.suricata.io/" target="_blank" title="Moteur de détection d'intrusion et d'analyse de trafic réseau">Suricata</a></li>
@@ -93,7 +93,7 @@
                 <div class="col-md-3">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title">Firewall</h5>
+                            <h5 class="card-title">Parefeu</h5>
                             <p>Les firewalls protègent les réseaux en filtrant le trafic entrant et sortant selon des règles définies.</p>
                             <ul>
                                 <li><a href="https://www.pfsense.org/" target="_blank" title="Firewall open source basé sur FreeBSD">pfSense</a></li>
@@ -122,7 +122,7 @@
                 <div class="col-md-3">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title">Vuln Scan</h5>
+                            <h5 class="card-title">Gestion des Vulnérabilités</h5>
                             <p>Les scanners de vulnérabilités identifient les failles de sécurité dans les systèmes et applications.</p>
                             <ul>
                                 <li><a href="https://www.openvas.org/" target="_blank" title="Scanner de vulnérabilités open source">OpenVAS</a></li>
@@ -138,7 +138,7 @@
                 <div class="col-md-3">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title">Hardening</h5>
+                            <h5 class="card-title">Hardening (renforcement)</h5>
                             <p>Les outils de hardening renforcent la sécurité des systèmes en appliquant des configurations sécurisées.</p>
                             <ul>
                                 <li><a href="https://www.cisecurity.org/cis-benchmarks/" target="_blank" title="Benchmarks de sécurité pour renforcer les configurations système">CIS Benchmarks</a></li>
@@ -158,7 +158,6 @@
                                 <li><a href="https://www.openvswitch.org/" target="_blank" title="Switch virtuel pour la segmentation réseau">Open vSwitch</a></li>
                                 <li><a href="https://www.pfsense.org/" target="_blank" title="Firewall open source avec fonctionnalités de segmentation">pfSense</a></li>
                                 <li><a href="https://www.opnsense.org/" target="_blank" title="Firewall et routeur open source avec segmentation">OPNsense</a></li>
-                                <li><a href="https://www.nftables.org/" target="_blank" title="Framework pour la gestion des pare-feu et la segmentation sous Linux">nftables</a></li>
                             </ul>
                         </div>
                     </div>
@@ -246,7 +245,7 @@
                 <div class="col-md-3">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title">IAM - Droits, AD et LDAP</h5>
+                            <h5 class="card-title">Gestion des Identitiés et des Accès (IAM)</h5>
                             <p>Les outils IAM (Identity and Access Management) gèrent les identités et les droits d'accès pour renforcer la sécurité des systèmes.</p>
                             <ul>
                                 <li><a href="https://www.keycloak.org/" target="_blank" >Keycloak</a></li>
@@ -261,7 +260,7 @@
                 <div class="col-md-3">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title">Code Versioning, Code Scanning et DevSecOps</h5>
+                            <h5 class="card-title">Gestion des Codes Sources et DevSecOps</h5>
                             <p>Ces outils assurent la gestion du code source, l'analyse de sécurité et l'intégration de la sécurité dans le cycle de développement.</p>
                             <ul>
                                 <li><a href="https://git-scm.com/" target="_blank" >Git</a></li>
@@ -277,7 +276,7 @@
                 <div class="col-md-3">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title">ITIL - Changement Management, Incident Management</h5>
+                            <h5 class="card-title">Gestion des Incidents et des Changements</h5>
                             <p>Les outils ITIL permettent de structurer la gestion des incidents et des changements pour minimiser les impacts sur la sécurité.</p>
                             <ul>
                                 <li><a href="https://www.glpi-project.org/" target="_blank">GLPI</a></li>
@@ -285,6 +284,8 @@
                                 <li><a href="https://www.manageengine.com/products/service-desk/" target="_blank">ManageEngine ServiceDesk</a></li>
                                 <li><a href="https://www.freshworks.com/it-service-management/" target="_blank">Freshservice</a></li>
                                 <li><a href="https://www.otrs.com/" target="_blank">OTRS</a></li>
+                                <li><a href="https://www.redmine.org" target="_blank">Redmine (pour ticketing et support)</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -292,7 +293,7 @@
                 <div class="col-md-3">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title">Vault - Password et Secrets</h5>
+                            <h5 class="card-title">Mots de passe et Secrets</h5>
                             <p>Les outils de gestion des mots de passe et des secrets sécurisent les informations sensibles et limitent les accès non autorisés.</p>
                             <ul>
                                 <li><a href="https://www.vaultproject.io/" target="_blank">HashiCorp Vault</a></li>
@@ -460,9 +461,9 @@
                     <form>
                         <div class="form-group">
                             <label for="email">Adresse e-mail</label>
-                            <input type="email" class="form-control" id="email" placeholder="Votre adresse e-mail" required>
+                            <input type="email" class="form-control" id="email" placeholder="Votre adresse e-mail" required disabled>
                         </div>
-                        <button type="submit" class="btn btn-light">Envoyer</button>
+                        <button type="submit" disabled class="btn btn-light">Envoyer</button>
                     </form>
                 </div>
             </div>

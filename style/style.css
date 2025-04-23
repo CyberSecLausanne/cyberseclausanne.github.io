@@ -144,6 +144,11 @@ section .container {
     margin-bottom: 1rem; /* Ajouter un espacement entre les cartes */
 }
 
+/* Centrer les h5 dans les cartes */
+.card-body h5 {
+    text-align: center;
+}
+
 /* Gérer les sections en vue mobile */
 @media (max-width: 768px) {
     .row {
